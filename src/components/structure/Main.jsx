@@ -1,7 +1,9 @@
+import Jumbotron from "../partials/Jumbotron/Jumbotron.jsx";
+
 const Main = () => {
-  return (
-    <div>Main</div>
-  )
+    return (
+        <Jumbotron />
+    )
 }
 
 export default Main;

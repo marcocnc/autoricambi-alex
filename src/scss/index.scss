@@ -1,5 +1,6 @@
 @use './vars/vars.scss' as *;
 @import './partials/Header/header.scss';
+@import './partials//Jumbotron/jumbotron.scss';
 
 body {
   background-color: $main_bg_color;

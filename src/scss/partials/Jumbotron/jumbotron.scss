@@ -1,0 +1,33 @@
+$color_1: #d7ff09;
+
+#jumbotron {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.bg {
+		background-image: url("../../../assets/img/jumbo.jpg"); //TODO: Fix path
+		background-repeat: no-repeat;
+		background-size: cover;
+		filter: blur(10px) brightness(0.3);
+		background-position: top;
+		background-attachment: fixed;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+	.jumbo-title {
+		letter-spacing: 24px;
+		font-size: 64px;
+		color: $color_1;
+		z-index: 1;
+	}
+	.jumbo-desc {
+		font-size: 24px;
+	}
+}
+.jumbo-desc {
+	color: $color_1;
+	z-index: 1;
+}
