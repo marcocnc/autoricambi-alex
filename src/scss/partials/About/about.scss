@@ -1,0 +1,26 @@
+#about {
+	.story-container {
+		.story-img {
+			width: 100%;
+		}
+		.story-content {
+			width: 100%;
+			p {
+				line-height: 36px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 961px) {
+	#about {
+		.story-container {
+			.story-img {
+				width: 50%;
+			}
+			.story-content {
+				width: 50%;
+			}
+		}
+	}
+}
