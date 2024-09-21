@@ -7,7 +7,7 @@ $color_1: #d7ff09;
 	align-items: center;
 	flex-direction: column;
 	.bg {
-		background-image: url("../../../assets/img/jumbo.jpg"); //TODO: Fix path
+		background-image: url(@assets/img/jumbo.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		filter: blur(10px) brightness(0.3);
