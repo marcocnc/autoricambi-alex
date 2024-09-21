@@ -5,7 +5,7 @@ import Footer from "./components/structure/Footer.jsx";
 const App = () => {
 
     return (
-        <div className="main-wrapper container">
+        <div className="main-wrapper">
             <Header />
             <Main />
             <Footer />
