@@ -1,5 +1,7 @@
 @use './vars/vars.scss' as *;
+@import './partials/Header/header.scss';
 
-h1{
-  color: $main_yellow;
+body {
+  background-color: $main_bg_color;
+  font-family: "Roboto", sans-serif;
 }

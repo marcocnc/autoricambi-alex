@@ -1,7 +1,9 @@
+import Navbar from "../partials/Navbar/Navbar.jsx";
+
 const Header = () => {
-  return (
-    <div>Header</div>
-  )
+    return (
+        <Navbar />
+    )
 }
 
 export default Header;
