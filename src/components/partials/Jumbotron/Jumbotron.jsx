@@ -1,7 +1,7 @@
 
 const Jumbotron = () => {
     return (
-        <section id="jumbotron">
+        <section id="jumbotron" className="container">
             <div className="bg"></div>
             <h1 className="jumbo-title">Autoricambi Alex</h1>
             <p className="jumbo-desc">Alta qualità a basso prezzo.</p>

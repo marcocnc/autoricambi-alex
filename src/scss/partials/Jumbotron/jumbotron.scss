@@ -26,6 +26,20 @@ $color_1: #d7ff09;
 	.jumbo-desc {
 		font-size: 24px;
 	}
+
+	@media screen and (max-width: 991px) {
+		.jumbo-title{
+			font-size: 48px;
+			letter-spacing: 12px;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.jumbo-title{
+			font-size: 36px;
+			letter-spacing: 0;
+		}
+	}
 }
 .jumbo-desc {
 	color: $color_1;
