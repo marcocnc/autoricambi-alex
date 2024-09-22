@@ -1,7 +1,34 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
+import {useState, useEffect}    from 'react';
+import { Splide, SplideSlide }  from '@splidejs/react-splide';
 
 const Services = () => {
+
+    const services = [
+        {
+            icon:'fa-people-group',
+            name: 'Assistenza al banco'
+        },
+        {
+            icon:'fa-truck',
+            name: 'Consegna materiale con mezzo aziendale'
+        },
+        {
+            icon:'fa-wrench',
+            name: 'Sostituzione materiale difettoso'
+        },
+        {
+            icon:'fa-car-battery',
+            name: 'Deposito batterie esauste'
+        }
+    ]
+
+    const [servicesArr, setServicesArr] = useState([]);
+
+    useEffect(() => {
+        setServicesArr(services);
+    }, []);
+    
+
     return (
         <section id="services" className="section-divider py-4">
         <div className="container text-white">
@@ -16,66 +43,30 @@ const Services = () => {
                 <div className="divider"></div>
             </div>
 
-            {/* <ul className="services-list mt-5 ps-0">
-                <li className="my-3 p-4">
-                    <i className="fa-solid fa-people-group m-3"></i>
-                    <span>Assistenza al banco</span>
-                </li>
-                <li className="my-3 p-4">
-                    <i className="fa-solid fa-truck m-3"></i>
-                    <span>Consegna materiale con furgone aziendale</span>
-                </li>
-                <li className="my-3 p-4">
-                    <i className="fa-solid fa-wrench m-3"></i>
-                    <span>Sostituzione materiale difettoso</span>
-                </li>
-                <li className="my-3 p-4">
-                    <i className="fa-solid fa-car-battery m-3"></i>
-                    <span>Deposito batterie esauste</span>
-                </li>
-                <li className="my-3 p-4">
-                    <i className="fa-regular fa-user m-3"></i>
-                    <span>Servizio</span>
-                </li>
-            </ul>     */}
+            <Splide
+               className="services-list mt-5"
+               options={{
+                perPage: 1,
+                type: 'loop',
+               }}
+            >
+                {
+                    servicesArr &&
+                    servicesArr.length > 0 &&
+                    servicesArr.map((service, index) => {
+                        const {icon, name} = service;
 
-            <Splide className="services-list">
-                <SplideSlide>
-                <i className="fa-solid fa-people-group m-3"></i>
-                <span>Assistenza al banco</span>
-                </SplideSlide>
-                <SplideSlide>
-                    <img src="image2.jpg" alt="Image 2"/>
-                </SplideSlide>
+                        return (
+                            <SplideSlide key={index} className="py-2">
+                                <i className={("fa-solid m-3 " + icon)}></i>
+                                <span> {name} </span>
+                            </SplideSlide>
+                        )
+                    })
+                }
             </Splide>
 
-            {/* <section
-                id="thumbnail-carousel"
-                className="splide services-list mt-5 ps-0"
-                aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
-            >
-                <div className="splide__track">
-                    <ul className="splide__list">
-                        <li className="my-3 p-4">
-                            <i className="fa-solid fa-people-group m-3"></i>
-                            <span>Assistenza al banco</span>
-                        </li>
-                        <li className="my-3 p-4">
-                            <i className="fa-solid fa-truck m-3"></i>
-                            <span>Consegna materiale con furgone aziendale</span>
-                        </li>
-                        <li className="my-3 p-4">
-                            <i className="fa-solid fa-wrench m-3"></i>
-                            <span>Sostituzione materiale difettoso</span>
-                        </li>
-                        <li className="my-3 p-4">
-                            <i className="fa-solid fa-car-battery m-3"></i>
-                            <span>Deposito batterie esauste</span>
-                        </li>
-                    </ul>
-                </div>
-            </section> */}
-
+          
             <div className="whatsapp-container mt-5">
                 <a href="#" className="btn whatsapp-btn">
                     <i className="fa-brands fa-whatsapp"></i>
