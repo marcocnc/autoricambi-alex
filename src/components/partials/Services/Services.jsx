@@ -42,7 +42,7 @@ const Services = () => {
                 <div className="divider"></div>
             </div>
 
-            <div className="services-container row mt-5">
+            <div className="services-container row my-5">
                 {
                     servicesArr &&
                     servicesArr.length > 0 &&
@@ -59,6 +59,9 @@ const Services = () => {
                 }
             </div>
           
+            <h6 className="second-title text-center">
+                    Vuoi maggiori informazioni?
+            </h6>
             <div className="whatsapp-container mt-5">
                 <a href="#" className="btn whatsapp-btn">
                     <i className="fa-brands fa-whatsapp"></i>
