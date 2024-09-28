@@ -1,5 +1,4 @@
 import {useState, useEffect}    from 'react';
-import { Splide, SplideSlide }  from '@splidejs/react-splide';
 
 const Services = () => {
 
@@ -10,7 +9,7 @@ const Services = () => {
         },
         {
             icon:'fa-truck',
-            name: 'Consegna materiale con mezzo aziendale'
+            name: 'Consegna con mezzo aziendale'
         },
         {
             icon:'fa-wrench',
@@ -43,13 +42,7 @@ const Services = () => {
                 <div className="divider"></div>
             </div>
 
-            <Splide
-               className="services-list mt-5"
-               options={{
-                perPage: 1,
-                type: 'loop',
-               }}
-            >
+            <div className="services-container row mt-5">
                 {
                     servicesArr &&
                     servicesArr.length > 0 &&
@@ -57,14 +50,36 @@ const Services = () => {
                         const {icon, name} = service;
 
                         return (
-                            <SplideSlide key={index} className="py-2">
-                                <i className={("fa-solid m-3 " + icon)}></i>
-                                <span> {name} </span>
-                            </SplideSlide>
+
+                            <>
+                                <div className="col-12 col-lg-6 service" key={index} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i className={("fa-solid m-3 " + icon)}></i>
+                                    <span> {name} </span>
+                                </div>
+                            
+                                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            ...
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-primary">Save changes</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </>
+                            
                         )
                     })
                 }
-            </Splide>
+            </div>
 
           
             <div className="whatsapp-container mt-5">
