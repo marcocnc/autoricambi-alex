@@ -54,5 +54,7 @@
 
 	&:hover {
 		background-color: $whatsapp_btn_hov;
+		transform: scale(1.2);
+		transition: all .3s;
 	}
 }
